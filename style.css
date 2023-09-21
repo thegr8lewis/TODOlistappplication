@@ -12,7 +12,7 @@ p {
 
 /* Style the header */
 header {
-  background-color: #333;
+  background-color: #001233; /* Attractive blue background */
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -32,18 +32,26 @@ h1 {
   width: 80%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #007BFF; /* Blue border */
   border-radius: 5px;
+  transition: border-color 0.3s ease; /* Add a transition for a smoother effect */
+}
+
+/* Remove the border when input is focused */
+#new-task-input:focus {
+  border: none;
+  outline: none; /* Remove the default outline */
 }
 
 #new-task-submit {
-  background-color: #333;
+  background-color: #007BFF; /* Blue background */
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  background-color: rgb(110, 173, 15);
 }
 
 /* Style the task list section */
@@ -60,8 +68,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
+  background-color: #F0F8FF; /* Light blue background */
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
@@ -76,30 +83,56 @@ h2 {
   padding: 5px;
   font-size: 16px;
   border: none;
-  border-bottom: 1px solid #ccc;
+  border: 2px solid grey; /*Blue bottom border */
+  padding-left: 10px;
+  border-radius: 5px;
 }
 
+/*.task input[type="text"]{
+  border: none;
+  outline: none; /* Remove the default outline */
+
+
 .task .actions button {
-  background-color: #333;
+  background-color: #007BFF; /* Blue background */
   color: white;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 14px;
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 30px;
+
 }
 
 /* Style the task buttons */
 .task .actions button.edit {
-  background-color: #007bff;
+  background-color: #0056b3; /* Darker blue for edit */
 }
 
 .task .actions button.delete {
   background-color: #ff4444;
 }
 
-/* Hover effect for task buttons */
-.task .actions button:hover {
-  opacity: 0.8;
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  #new-task-input {
+    width: 100%;
+  }
+
+  #new-task-submit {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .task {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .task .actions {
+    margin-top: 10px;
+  }
 }
+
