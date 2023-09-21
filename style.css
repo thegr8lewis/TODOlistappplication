@@ -1,0 +1,105 @@
+/* Reset some default styles for consistency */
+body,
+h1,
+h2,
+form,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+/* Style the form for adding tasks */
+#new-task-form {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#new-task-input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#new-task-submit {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style the task list section */
+.task-list {
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+/* Style individual task items */
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.task .content {
+  flex-grow: 1;
+}
+
+.task input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.task .actions button {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+/* Style the task buttons */
+.task .actions button.edit {
+  background-color: #007bff;
+}
+
+.task .actions button.delete {
+  background-color: #ff4444;
+}
+
+/* Hover effect for task buttons */
+.task .actions button:hover {
+  opacity: 0.8;
+}
